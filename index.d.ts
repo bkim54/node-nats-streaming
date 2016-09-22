@@ -87,6 +87,7 @@ interface AckHandlerCallback { (err: Error, guid: string): void; }
 
 declare class Stan extends events.EventEmitter {
 
+	nc: nats.Client;
 	/**
 	 * Close the connection to the server.
 	 */
